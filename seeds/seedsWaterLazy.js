@@ -1,15 +1,11 @@
 [{
-    "timestamp": {
-        "$date": {
-            "$numberLong": "1669210315999"
-        }
+    "$date": {
+        "$numberLong": "1669210315999"
     },
-    "metadata": {
-        "location": "yard",
-        "sensorId": 9999,
-        "type": "humidity"
-    },
-    "humidity": 78
+    "sensorId": "2222",
+    "type": "humidity",
+    "location": "yard",
+    "humidity": "78"
 },
 {
     "timestamp": {
@@ -17,12 +13,10 @@
             "$numberLong": "1669210316999"
         }
     },
-    "metadata": {
-        "location": "yard",
-        "sensorId": 9999,
-        "type": "humidity"
-    },
-    "humidity": 78
+    "sensorId": "1111",
+    "type": "humidity",
+    "location": "yard",
+    "humidity": "89"
 }
 ]
 

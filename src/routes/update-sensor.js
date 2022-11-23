@@ -17,6 +17,7 @@ router.post('/', async function(req, res, next) {
   location = req.body.location;
   metadata = {sensorId, type, location}; 
   const result = await repository.addValue({timestamp, metadata, humidity})
+  console.log(result);
   res.status(201).json(result)
 });
 
@@ -25,7 +26,7 @@ router.get('/', async function(req, res, next) {
   res.json(plants);
 })
 
-router.get('/sensorId/:id', async function(req, res, next) {
+router.get('/:id', async function(req, res, next) {
   sensorId = parseInt(req.params.id);
   const values = await repository.getValuesById(sensorId);
   let humidity = values.map(i => i.humidity)
